@@ -1,0 +1,38 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-course-details',
+  templateUrl: './course-details.component.html',
+  styleUrls: ['./course-details.component.css'],
+})
+export class CourseDetailsComponent {
+  activeTab: string = 'overview';
+
+  skills: string[] = [
+    'Productivity',
+    'Prompt Engineering',
+    'MS Excel',
+    'Data Ethics',
+    'Document Management',
+    'Data Analysis',
+    'Data Visualization',
+    'SQL',
+    'Spreadsheets',
+    'Data Cleaning',
+  ];
+
+  description: string = `
+    Quickly master Google Analytics with this hands-on, scenario-driven course, and start improving the performance of your websites today!
+
+    Go from Beginner to Advanced:
+    With step-by-step guidance from your instructor, you will use Google analytics as a powerful tool to monitor the health of your website.
+    
+    You’ll learn to:
+    • Track Website Traffic
+    • Create Custom Reports
+    • Segment Audiences by Behavior
+    • Set Up Goals and Campaign Tracking
+    • And Much More!
+  `;
+}
+
