@@ -1,0 +1,58 @@
+<div class="course-search-container">
+  <!-- Sidebar Filter -->
+  <aside class="filter-sidebar">
+    <h3>Filter</h3>
+
+    <div class="filter-section">
+      <h4>Duration</h4>
+      <ul>
+        <li *ngFor="let duration of durations">
+          <input type="checkbox" /> {{ duration.label }} ({{ duration.count }})
+        </li>
+      </ul>
+    </div>
+
+    <div class="filter-section">
+      <h4>Rating</h4>
+      <ul>
+        <li *ngFor="let rating of ratings">
+          <input type="checkbox" />
+          <span [innerHTML]="rating.stars"></span> & up ({{ rating.count }})
+        </li>
+      </ul>
+    </div>
+
+    <div class="filter-section">
+      <h4>Published Date</h4>
+      <ul>
+        <li *ngFor="let date of publishedDates">
+          <input type="checkbox" /> {{ date.label }} ({{ date.count }})
+        </li>
+      </ul>
+    </div>
+  </aside>
+
+  <!-- Course List -->
+  <main class="course-results">
+    <div class="result-header">
+      <h2>{{ courses.length }} Results for "{{ searchQuery }}"</h2>
+    </div>
+
+    <div class="course-grid">
+      <div class="course-card" *ngFor="let course of courses">
+        <img [src]="course.image" alt="Course Image" />
+        <div class="info">
+          <h3>{{ course.title }}</h3>
+          <p class="skills">Skills you’ll gain: {{ course.skills }}</p>
+          <p class="rating">
+            ⭐ {{ course.rating }} &nbsp; {{ course.reviews }} reviews
+          </p>
+          <p class="level">
+            {{ course.level }} &nbsp; | &nbsp; {{ course.duration }}
+          </p>
+          <span *ngIf="course.new" class="badge">New Launch</span>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
