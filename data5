@@ -1,0 +1,80 @@
+.course-details-container {
+  padding: 30px;
+  background-color: #1e1e1e;
+  color: white;
+  font-family: Arial, sans-serif;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.course-header h2 {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.course-header p {
+  color: #ccc;
+  margin-bottom: 10px;
+}
+
+.link-btn {
+  margin: 15px 0;
+  padding: 10px 20px;
+  background-color: #27ae60;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.meta-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin: 30px 0 10px 0;
+}
+
+.tabs button {
+  background-color: #333;
+  border: none;
+  padding: 10px 20px;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.tabs button.active {
+  background-color: #27ae60;
+}
+
+.tab-content h3 {
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.tab-content ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 10px 0 30px 0;
+}
+
+.skill-tags span {
+  background-color: #444;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+}
