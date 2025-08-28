@@ -1,0 +1,59 @@
+<div class="course-details-container">
+  <div class="course-header">
+    <h2>Google Data Analytics<br /><span>Course-1</span></h2>
+    <p>
+      Become a Prompt Engineering Expert. Master prompt engineering patterns,
+      scaffolding, and approaches to effectively leverage Generative AI.
+    </p>
+
+    <button class="link-btn">Enroll Now | 45,089 already enrolled</button>
+
+    <div class="meta-info">
+      <div><strong>Level:</strong> Beginner Level</div>
+      <div><strong>Rating:</strong> ⭐ 4.8 (1278 reviews)</div>
+      <div><strong>Duration:</strong> 05 Weeks</div>
+      <div><strong>Flexible Schedule:</strong> Learn at your own pace</div>
+    </div>
+  </div>
+
+  <!-- Tabs -->
+  <div class="tabs">
+    <button (click)="activeTab = 'overview'" [class.active]="activeTab === 'overview'">Overview</button>
+    <button (click)="activeTab = 'content'" [class.active]="activeTab === 'content'">Course Content</button>
+    <button (click)="activeTab = 'author'" [class.active]="activeTab === 'author'">Author Details</button>
+    <button (click)="activeTab = 'testimonials'" [class.active]="activeTab === 'testimonials'">Testimonials</button>
+  </div>
+
+  <!-- Tab Content -->
+  <div class="tab-content" *ngIf="activeTab === 'overview'">
+    <h3>What you'll learn</h3>
+    <ul>
+      <li>Gain an immersive understanding of the practices and processes used by a junior or associate data analyst in their day-to-day job.</li>
+      <li>Understand how to clean and organize data, and complete analysis and calculations using spreadsheets, SQL, and R.</li>
+      <li>Learn how to visualize and present data findings in dashboards and commonly used visualization platforms.</li>
+    </ul>
+
+    <h3>Skills you'll gain</h3>
+    <div class="skill-tags">
+      <span *ngFor="let skill of skills">{{ skill }}</span>
+    </div>
+
+    <h3>Requirements</h3>
+    <p>No experience required. If you can use a web browser, you are good to go!</p>
+
+    <h3>Description</h3>
+    <p>{{ description }}</p>
+  </div>
+
+  <div class="tab-content" *ngIf="activeTab === 'content'">
+    <p>Course content goes here...</p>
+  </div>
+
+  <div class="tab-content" *ngIf="activeTab === 'author'">
+    <p>Author details go here...</p>
+  </div>
+
+  <div class="tab-content" *ngIf="activeTab === 'testimonials'">
+    <p>Testimonials go here...</p>
+  </div>
+</div>
