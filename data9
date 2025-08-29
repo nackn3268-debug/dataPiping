@@ -1,0 +1,19 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-edit-user',
+  templateUrl: './edit-user.component.html',
+  styleUrls: ['./edit-user.component.css'],
+})
+export class EditUserComponent {
+  activeTab: string = 'profile';
+
+  user = {
+    firstName: 'Harry',
+    middleName: '',
+    lastName: 'Shimron',
+    email: 'username@mail.com',
+    roles: ['Blogger', 'Author'],
+    bio: `Passionate writer and avid traveler, Alex Thompson shares insights from his adventures around the globe. With a background in journalism, he combines storytelling with a love for photography, capturing the essence of each destination. When not exploring new cultures, Alex enjoys reading historical fiction and experimenting with gourmet recipes.`,
+  };
+}
